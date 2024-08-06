@@ -1,14 +1,26 @@
 h1 {
     text-align: center;
+    align-content: center;
     font-family: "copperplate", fantasy;
     width: auto;
-    height: 250px;
-    padding: 20px;
-    height: 100px;
+    height: 150px;
+    padding-bottom: 40px;
     font-size: 80px;
-    text-align: center;
     border-bottom: 1px solid #000;
     border-radius: 8px;
+    transition: text-shadow 0.3s ease-in-out;
+    cursor: default;
+    background-image: linear-gradient(to right, red , rgb(33, 4, 100));
+}
+
+h1:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 
+                 0 0 12px rgba(255, 0, 0, 0.6),  
+                 0 0 16px rgba(255, 0, 0, 0.4); 
+}
+
+body {
+    background-image: url(https://i.imgur.com/4ZTiM1o.jpeg);
 }
 
 #container {
@@ -24,28 +36,41 @@ h1 {
     border: 2px solid black;
     display: inline-block;
     border-radius: 10px;
+    background-image: linear-gradient(to right, red , rgb(33, 4, 100));
 }
 
 #column2 {
     border: 2px solid black;
     display: inline-block;
     border-radius: 10px;
+    background-image: linear-gradient(to right, red , rgb(33, 4, 100));
 }
 
 #column3 {
     border: 2px solid black;
     display: inline-block;
     border-radius: 10px;
+    background-image: linear-gradient(to right, red , rgb(33, 4, 100));
 }
 
 .piko-card {
     flex-basis: 25%;
     margin: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .piko-img {
     width: 200px;
     border-radius: 1em;
+    transition: transform 0.3s ease;
+}
+
+.piko-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -57,14 +82,38 @@ h1 {
     padding: 15px;           
     margin-top: 1em;         
     background-color: #f0f0f0; 
-    border-radius: 5px;      
+    border-radius: 5px; 
+    cursor: pointer;     
 
+}
+
+.char {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.piko-info:hover .char {
+    animation: move 0.5s infinite;
+}
+
+@keyframes move {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
 .piko-name {
     font-family: "copperplate", fantasy;
     font-size: 2em;
     text-decoration: underline;
+    transition: text-shadow 0.3s ease-in-out;
+    cursor: default;
+}
+
+.piko-name:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 
+                 0 0 12px rgba(255, 0, 0, 0.6),  
+                 0 0 16px rgba(255, 0, 0, 0.4); 
 }
 
 .piko-abilities {
