@@ -14,11 +14,11 @@ export const pikomon = () => {
         <article class="piko-card">
             <img src="${pikomon.imageUrl}" class="piko-img">
             <h2 class="piko-name">${pikomon.name}</h2>
-            <ul class="piko-info">
-                <li class="piko-category">${pikomon.category}</li>
-                <li class="piko-abilities">${pikomon.abilities}</li>
-                <li class="piko-weakness">${pikomon.weakness}</li>
-            </ul>
+                <ul class="piko-info">
+                    <li class="piko-category">Category: ${pikomon.category}</li>
+                    <li class="piko-abilities">Ability: ${pikomon.abilities}</li>
+                    <li class="piko-weakness">Weakness: ${pikomon.weakness}</li>
+                </ul>
         </article>
         `;
 
