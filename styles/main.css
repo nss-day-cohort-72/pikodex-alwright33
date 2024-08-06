@@ -1,4 +1,4 @@
-#title {
+h1 {
     text-align: center;
     font-family: copperplate;
     font-size: 5em;
@@ -7,8 +7,9 @@
 
 #container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
@@ -19,7 +20,7 @@
 }
 
 .piko-img {
-    width: 100%;
+    width: 200px;
     border-radius: 1em;
 }
 

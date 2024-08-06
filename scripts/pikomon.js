@@ -1,19 +1,34 @@
 import { database } from "./database.js";
 
 export const pikomon = () => {
-    let pikomonHTML = '';
-    for (const pikomon of database) {
-        
-        pikomonHTML += `
-        <article class="pikomon">
-            <img src="${pikomon.imageUrl}>
-            <ul class="pikomon__details">
-                <li class="pikomon__category">"${pikomon.category}"</li>
-                <li class="pikomon__abilities">"${pikomon.abilities}"</li>
-                <li class="pikomon__weakness">"${pikomon.weakness}"</li>
+    const column1 = document.getElementById('column1');
+    const column2 = document.getElementById('column2');
+    const column3 = document.getElementById('column3');
+
+    column1.innerHTML = '';
+    column2.innerHTML = '';
+    column3.innerHTML = '';
+ 
+    for (const pikomon of database) { 
+        const pikomonHTML = `
+        <article class="piko-card">
+            <img src="${pikomon.imageUrl}" class="piko-img">
+            <h2 class="piko-name">${pikomon.name}</h2>
+            <ul class="piko-info">
+                <li class="piko-category">${pikomon.category}</li>
+                <li class="piko-abilities">${pikomon.abilities}</li>
+                <li class="piko-weakness">${pikomon.weakness}</li>
             </ul>
         </article>
-        `
-        return pikomonHTML;
+        `;
+
+        if (pikomon.id % 3 === 1) {
+            column1.innerHTML += pikomonHTML;
+        } else if (pikomon.id % 3 === 2) {
+            column2.innerHTML += pikomonHTML;
+        } else {
+            column3.innerHTML += pikomonHTML;
+        };
+        
     };
 };
